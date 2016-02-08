@@ -5,8 +5,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class HelloWorldDemo {
     public static void main(String[] args) {
+        String config = "ApplicationContext-HelloWorld.xml";
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("ApplicationContext-HelloWorld.xml");
+                new ClassPathXmlApplicationContext(config);
 
         Hello hello = (Hello) context.getBean("hello");
         hello.sayHello();
